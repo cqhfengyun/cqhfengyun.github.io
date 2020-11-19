@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>象棋发布测试版</title>
+	<meta charset="UTF-8">
+	<style>
+		body{
+			//text-align:center;
+			font-size:30px;
+			padding-right:20%;
+			padding-left:20%;
+		}
+		h1{
+			text-align:center;
+		}
+		p,ol{
+			font-size:20px;
+		}
+		.video{
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<h1>欢迎！</h1><br>
+	<div class="video">
+		使用视频<br>
+		<video width="720" height="480" controls>
+			<source src="../video/1.mp4" type="video/mp4"></source>
+		</video>
+	</div>
+	<ul type="disc">
+		
+		<li><a href="chess-release.zip">下载链接</a></li>
+	<ul>
+	<br>
+	<div>发布说明
+		<p>
+			&nbsp;&nbsp;&nbsp;&nbsp;历经艰辛，我的象棋发布测试版终于做好了，不过只能在Windows上运行，增加了联机对战的功能。理论上只要能联网，就能进行联机对战，当然还是有很多问题的。<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;如果是进行单机游戏的话应该没什么问题，只是没有人机，只能自己瞎点。<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;如果想体验联机模式的话，需要注意几个问题。我先介绍一下内部原理，让你们更好理解。我的象棋服务器挂在云服务器上，一直不关。象棋客户端点击联机游戏后，就会和服务器连接，服务器数据里的玩家数量就会增加一个，按顺序给每个玩家分配ID。但是象棋服务器只允许ID1和ID2玩家进行游戏,而且服务器不会清除断开连接的玩家信息，只要分配了一个ID就不会再给其他玩家分配这个ID了。所以我增加了一个服务器重启的功能，重启后会清除所有数据，ID也是重新分配。<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;所以划重点，如果想要体验联机模式，请按以下步骤。一般不会有其他人使用，所以只能自己开两个客户端。第一次进入联机游戏大厅如果ID不是1请按R键重启服务器，然后返回主菜单，就可以正常使用了。只要ID1和2的客户端都准备游戏就会开始游戏。<br><br>
+			快捷键<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;游戏时按鼠标中间的按键可以旋转棋盘。按回车键或者Esc键打开游戏菜单。联机游戏大厅按R键重启服务器，重启服务器以后记得先回到主菜单。<br>
+			<br>
+			常见问题
+			<ol type="1" start="1">
+				<li>连接不上服务器。服务器故障或者你的网不好，或者服务器的网不好或者服务器比较卡(服务器配置比较差，体谅一下)</li>
+				<li>不管怎么点总人数都是0。原因同上。</li>
+				<li>ID大于3。请按R键重启服务器，然后返回主菜单，就可以正常使用。</li>
+				<li>莫名其妙断开连接。有可能是其他人在重启服务器，不过应该没多少人会用，这种情况概率较小。</li>
+				<li>提示图片加载失败。和exe一起的有个image文件夹，使用时exe和image文件夹要在同一个目录下。</li>
+			</ol>
+		</p>
+	</div>
+</body>
+</html>
