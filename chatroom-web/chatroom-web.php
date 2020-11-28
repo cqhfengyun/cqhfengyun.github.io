@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>象棋聊天室</title>
+	<meta charset="UTF-8">
+	<style>
+		body{
+			text-align:center;
+			font-size:30px;
+			padding-right:20%;
+			padding-left:20%;
+		}
+		label{
+			text-align:center;
+		}
+		input{
+			height:100%;
+			font-size:25px;
+			margin:10px;
+		}
+		.hismsg{
+			border:3px solid rgb(0,128,255);
+			width:70%;
+			display:inline-block;
+		}
+		.msg{
+			border:3px solid rgb(255,255,128);
+			margin:20px;
+		}
+		.msgheader{
+			font-size:25px;
+			color:rgb(128,255,128);
+		}
+		.msgcontent{
+			font-size:25px;
+			color:rgb(0,128,255);
+		}
+		textarea{
+			font-size:25px;
+			width:70%;
+		}
+	</style>
+</head>
+<body>
+	<? name="李四";content="你好！";?>
+	<? echo "<div class=\"msg\">
+			<div class=\"msgheader\">
+				2020/11/23/10:00用户 "+name+"：
+			</div>
+			<div class=\"msgcontent\">
+				"+content+"
+			</div>
+		</div>";?>
+	<h1>象棋聊天室</h1><font style="position:absolute;left:50px;top:50px;">测试版，暂无功能！</font>
+	<div class="hismsg">
+		<div class="msg">
+			<div class="msgheader">
+				2020/11/23/10:00用户 张三：
+			</div>
+			<div class="msgcontent">
+				大家好！你好我好大家好！
+			</div>
+		</div>
+		<div class="msg">
+			<div class="msgheader">
+				2020/11/23/10:00用户 张三：
+			</div>
+			<div class="msgcontent">
+				大家好！你好我好大家好！
+			</div>
+		</div>
+		<div class="msg">
+			<div class="msgheader">
+				2020/11/23/10:00用户 张三：
+			</div>
+			<div class="msgcontent">
+				大家好！你好我好大家好！
+			</div>
+		</div>
+	</div><br><br>
+	<form action="http://182.254.132.111/chatroom.php" method="get" target="_blank">
+		<label>
+			输入你的昵称:
+			<input type="text" maxlength="10">
+			<input type="submit" value="发送">
+		</label><br><br>
+		<label>
+			输入发表内容:<br><br>
+			<textarea rows=10 cols=40></textarea>
+		</label>
+	</form>
+	<? echo "hello";?>
+</body>
+</html>
