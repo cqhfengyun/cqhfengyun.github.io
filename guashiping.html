@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>自动挂视频</title>
+		<meta charset="UTF-8">
+		<script language="JavaScript">
+			this.vvv=new Array();
+			function openwindow()
+			{
+				console.log("Hello world!");
+				var num=document.getElementById("input").value;
+				console.log(num);
+				open1(num);
+			};
+			function open1(num)
+			{
+				var s1="https://bksycsu.yuketang.cn/pro/lms/87JVHttmcZZ/5439914/video/"
+				//str=s1;
+				//vvv[i]=window.open(str,"s1","alwaysLowered=true");
+				//vvv[i]=window.open(str,"s2","alwaysLowered=true");
+				for(var i=0;i<10;i++)
+				{	
+					var str=s1+num;
+					console.log(str);
+					vvv[i]=window.open(str,"s"+num,"alwaysLowered=true");
+					//console.log(vvv[i]);
+					num++;
+				}
+				setTimeout(closewindow,1000*60*10-2000);
+				setTimeout(function(){open1(num)},1000*60*10);
+			}
+			function closewindow()
+			{
+				for(var i=0;i<10;i++)
+				{	
+					window.vvv[i].close();
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1>自动挂思修</h1>
+		<p>
+			这个网页可以自动挂多个视频。<br>
+			只支持思修！第一步，先在浏览器中打开要挂的视频(只要第一个)，然后复制链接最后的数字，在输入框里输入，点击确定。<br>
+			比如链接为https://bksycsu.yuketang.cn/pro/lms/87JVHttmcZZ/5439914/video/7627606，只需输入7627606。<br>
+			就会自动打开后面10个视频，10分钟后自动关闭窗口并继续打开后续的视频，重复操作。<br>
+			注意！如果点击后确定后没有打开新窗口，请注意可能被浏览器阻止了，同意弹窗即可。<br>
+			每个视频只挂10分钟，可能出现一个视频没有挂满的情况，这个得自己处理。<br>
+			可能出现视频加载失败的情况，这是思修的问题，不是我的问题。<br>
+			每次打开的窗口可能没有视频，不用理会，因为视频链接不是每次加1，但这个网页是每次加1，以确保不会漏掉任何一个视频<br>
+			想要停止直接关闭即可。
+		</p>
+		<input type="number" id="input" title="hhh" value="7627606"><br>
+		<input type="button" value="确定" onclick="openwindow()">
+		<!-- <script language="JavaScript"> -->
+			<!-- console.log("Hello world!"); -->
+			<!-- var v=window.open("https://bksycsu.yuketang.cn/pro/lms/87JVHttmcZZ/5439914/video/7627668","_blank"); -->
+			<!-- setTimeout(function(){v.close();},3000); -->
+			<!-- //v.close(); -->
+		<!-- </script> -->
+	</body>
+</html>
